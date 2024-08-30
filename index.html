@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Enlace a Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/fotos-premium/poderoso-fondo-gimnasio-fitness_849761-29159.jpg'); /* Cambia esta URL por la ruta a tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 60px;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad para mejor contraste */
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: 500;
+            color: #555;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ced4da;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .btn-primary:focus, .btn-primary.focus {
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #007bff;
+        }
+        @media (max-width: 767.98px) {
+            .container {
+                margin-top: 20px;
+                padding: 0 15px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .card-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Página de Registro -->
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-user-plus"></i> Registro de Usuarios</h2>
+            <form action="control.php" method="post">
+                <div class="mb-3 form-group">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" class="form-control" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="tipo_membresia" class="form-label">Tipo de Membresía:</label>
+                    <select id="tipo_membresia" name="tipo_membresia" class="form-select" required>
+                        <option value="diario">Diario</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="trimestral">Trimestral</option>
+                        <option value="semestral">Semestral</option>
+                    </select>
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="fecha_inicio" class="form-label">Fecha de Inicio:</label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Registrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
